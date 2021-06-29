@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parallax {
+  height: 100vh;
+  background-color: #ffa4ac;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &__h1 {
+    position: absolute;
+  }
+}
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffa4ac;
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__shadow {
+    position: absolute;
+    bottom: 100%;
+    height: 70%;
+    width: 100%;
+    left: 0;
+    z-index: 20;
+    background: linear-gradient(to top, #ffa4ac, transparent);
+  }
+
+  &__container {
+    width: 60%;
+    // background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__card {
+      //   background-image: url("./petra1.jpeg");
+      //   background-position: center;
+      //   background-size: cover;
+      //   padding: 0rem 5rem;
+      transition: transform 5s ease;
+      transform-style: preserve-3d;
+
+      width: 25rem;
+      height: 80vh;
+      border-radius: 30px;
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.9),
+        0px 0px 50px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+
+      &__petra1 {
+        object-fit: cover;
+        border-radius: 30px;
+        width: 100%;
+      }
+
+      &__circle-eye {
+        width: 12rem;
+        height: 12rem;
+        position: absolute;
+        border-radius: 50%;
+        margin-top: 2rem;
+
+        overflow: hidden;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.9),
+          0px 0px 50px rgba(0, 0, 0, 0.9);
+        transition: all 0.75s ease-out;
+
+        &__petra4 {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      &__text {
+        position: absolute;
+        left: 20%;
+        top: 65%;
+
+        &--title {
+          text-transform: uppercase;
+          color: black;
+          font-size: bold;
+          font-size: 2rem;
+          text-shadow: 0px 5px 8px rgba(0, 0, 0, 1);
+          transition: all 0.75s ease-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.plane {
+  width: 200px;
+  transform: rotate(40deg);
+  position: absolute;
+  top: -5%;
+  left: -5%;
+}

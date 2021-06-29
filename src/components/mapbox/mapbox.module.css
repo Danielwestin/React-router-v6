@@ -1,0 +1,32 @@
+.cluster_marker {
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00813c;
+  color: #fcd205;
+}
+.marker_arrow {
+  border-bottom: 1px solid black;
+  width: 3px;
+  height: 2px;
+  cursor: pointer;
+  width: 0px;
+  height: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #00813c;
+}
+
+.popup button {
+  padding: 0 0.5rem;
+}
+.popup_wrapper {
+  padding: 0.5rem;
+}
+.systembolaget_logo {
+  transform: translate(-40%, -145%);
+  width: 50px;
+  cursor: pointer;
+}

@@ -1,0 +1,389 @@
+.gridSection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  padding: 2rem;
+  background-color: rgb(243, 243, 243);
+}
+
+.gridSection__topLeft {
+  grid-column: 3/8;
+  grid-row: 1/5;
+  min-height: 15vmin;
+  border: solid 5px black;
+}
+
+.gridSection__topLeft img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gridSection__topRight {
+  grid-column: 7/13;
+  grid-row: 1/8;
+  background-color: #fff;
+  min-height: 10vmin;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 2rem 4rem 3rem 4rem;
+}
+
+.gridSection__bottomLeft {
+  grid-column: 5/10;
+  grid-row: 7/10;
+  align-self: center;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 2rem 4rem 3rem 4rem;
+}
+
+.gridSection__bottomRight {
+  grid-column: 9/14;
+  grid-row: 6/10;
+  border: solid 5px black;
+}
+.gridSection__bottomRight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .costsBenefitsCalc {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: 1fr;
+  padding: 6rem 0;
+
+  @media only screen and (max-width: $bp-L) {
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 1fr max-content;
+    padding-bottom: 0;
+  }
+  &__reverse {
+    & > .costsBenefitsCalc__left {
+      grid-column: 9/14;
+      grid-row: 1;
+      @include IE {
+        &:nth-child(2) {
+          grid-column: 7;
+          -ms-grid-row-align: center;
+        }
+      }
+      @media only screen and (max-width: $bp-L) {
+        grid-column: 4/14;
+        grid-row: 2;
+        align-self: flex-start;
+        transform: translateY(-10rem);
+        @include IE {
+          &:nth-child(2) {
+            grid-column: 4;
+          }
+        }
+      }
+    }
+    & > .costsBenefitsCalc__right {
+      grid-column: 3/10;
+      grid-row: 1;
+      @include IE {
+        &:nth-child(1) {
+          grid-column: 3;
+        }
+      }
+      @media only screen and (max-width: $bp-XL) {
+        grid-column: 2/8;
+        grid-row: 1;
+        @include IE {
+          &:nth-child(1) {
+            grid-column: 2;
+          }
+        }
+      }
+      @media only screen and (max-width: $bp-L) {
+        grid-column: 3/13;
+        grid-row: 1;
+        @include IE {
+          &:nth-child(1) {
+            grid-column: 3;
+          }
+        }
+      }
+    }
+  }
+  &__left {
+    grid-column: 3/8;
+    grid-row: 1;
+    min-height: 65rem;
+    display: flex;
+    @include IE {
+      &:nth-child(1) {
+        grid-column: 3;
+      }
+    }
+    @media only screen and (max-width: $bp-XL) {
+      grid-column: 2/8;
+      grid-row: 1;
+      @include IE {
+        &:nth-child(1) {
+          grid-column: 2;
+        }
+      }
+    }
+    @media only screen and (max-width: $bp-L) {
+      grid-column: 3/13;
+      grid-row: 1;
+      min-height: 35rem;
+
+      @include IE {
+        &:nth-child(1) {
+          grid-column: 3;
+        }
+      }
+    }
+    @media only screen and (max-width: $bp-S) {
+      display: none;
+    }
+
+    &-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-video {
+      height: 100%;
+      width: 100%;
+      background-image: none;
+      z-index: -1;
+    }
+  }
+
+  &__right {
+    grid-column: 7/14;
+    grid-row: 1;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    // padding:9rem 8rem 7rem 8rem;
+    @include IE {
+      &:nth-child(2) {
+        grid-column: 7;
+        -ms-grid-row-align: center;
+      }
+    }
+    @media only screen and (max-width: $bp-L) {
+      grid-column: 4/14;
+      grid-row: 2;
+      align-self: flex-start;
+      transform: translateY(-10rem);
+      @include IE {
+        &:nth-child(2) {
+          grid-column: 4;
+        }
+      }
+    }
+    @media only screen and (max-width: $bp-S) {
+      grid-column: 2/14;
+      grid-row: 2;
+      transform: translateY(-5rem);
+      margin-bottom: 5rem;
+      padding: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-XS) {
+      padding: 1rem;
+    }
+
+    &__wrapper {
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      padding: 4rem 8rem 3rem 5rem;
+
+      @media only screen and (max-width: $bp-S) {
+        padding: 4rem 4rem 7rem 5rem;
+      }
+
+      @media only screen and (max-width: $bp-XS) {
+        padding: 2rem 1rem 3rem 1rem;
+      }
+
+      &__results {
+        // background-color: red;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+
+        @media only screen and (max-width: $bp-S) {
+          flex-direction: column;
+        }
+
+        &__single {
+          width: 40%;
+          height: 35vh;
+          padding: 0 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          @media only screen and (max-width: $bp-S) {
+            width: 100%;
+            height: 30vh;
+          }
+
+          &--text {
+            height: 40%;
+
+            @media only screen and (max-width: $bp-XS) {
+              height: 40%;
+            }
+
+            p {
+              padding: 1rem 0;
+            }
+          }
+
+          &--circleWrapper {
+            width: 100%;
+            height: 60%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: $bp-XS) {
+              height: 40%;
+            }
+          }
+
+          &--circle {
+            width: 120px;
+            height: 120px;
+            border: 8px solid $color-green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+
+            @media only screen and (max-width: $bp-XS) {
+              width: 100px;
+              height: 100px;
+            }
+
+            & p {
+              font-size: 4rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      &--buttonsWrapper {
+        display: flex;
+        @media only screen and (max-width: $bp-S) {
+          flex-direction: column;
+        }
+
+        button {
+          border: none;
+        }
+      }
+      & p {
+        padding: 2rem 0;
+        line-height: 1.7;
+      }
+    }
+    &-primary {
+      display: flex;
+      flex-direction: column;
+      &:after {
+        margin-top: 1rem;
+      }
+    }
+    &-secondary {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      font-family: "Thin";
+      font-size: 2rem;
+      line-height: 1;
+
+      &:after {
+        margin-top: 4rem;
+        @include underLine($color-blue);
+      }
+    }
+
+    &__form {
+      &--slider {
+        width: 100%;
+      }
+
+      &__mealsLabelWrapper {
+        margin: 0rem 1rem;
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-S) {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: $bp-L) {
+          width: 100%;
+        }
+
+        label {
+          transition: all 0.2s;
+        }
+      }
+
+      &__daysLabelWrapper {
+        margin: 0rem 1rem;
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-S) {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: $bp-L) {
+          width: 100%;
+        }
+
+        label {
+          transition: all 0.1s;
+        }
+      }
+
+      &--inputWrapper {
+        margin: 0rem 1rem;
+        width: 73%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-S) {
+          width: 96%;
+        }
+
+        @media only screen and (max-width: $bp-L) {
+          width: 98%;
+        }
+
+        input[type="range"] {
+          -webkit-appearance: none; /* Hides the slider so that custom slider can be made */

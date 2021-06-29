@@ -1,0 +1,123 @@
+@mixin underLine($color) {
+    display:flex;
+    content: '';
+    
+    height: 2px;
+    width: 10rem;
+    background-color: $color;
+    
+}
+
+
+@mixin linkReset {
+    &:link,
+    &:visited{
+        color: inherit;
+    }
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+
+
+
+@mixin linkFix {
+    &:link,
+    &:visited{
+        color: inherit;
+        transition: all .2s;
+    }
+
+    &:hover {
+        color: $color-one;
+        transition: all .2s;
+    }
+}
+
+
+
+@mixin IE {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+
+    
+   
+  }
+@mixin EDGE{
+
+    @supports (-ms-ime-align:auto) {
+        @content;
+    }
+
+}
+@mixin IE-object-fit-V{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    // For vertical blocks (i.e., where height is greater than width)
+    height: 100%;
+    width: auto;
+
+   
+}
+@mixin IE-object-fit-H{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+   
+
+    // For Horizontal blocks (i.e., where width is greater than height)
+    height: auto;
+    width: 100%;
+}
+
+@mixin btnColors($textColor, $bgColor, $hoverBgColor){
+    color: $textColor;
+    background-color: $bgColor;
+    transition: all .2s;
+    // &:hover{
+    //     background-color:  $hoverBgColor;
+    //     color: $textColor;
+    //     transition: all .2s;
+    // }
+
+}
+
+@mixin sliderDots{
+    display:flex;
+    list-style: none;
+    margin-top: 2rem;
+    & .slick-active{
+        background-color: $color-blue;
+        transition: all .2s;
+    }
+
+    & li{
+        transition: all .2s;
+        background-color: $color-gray-dot;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+        transition: all .2s;
+        cursor: pointer;
+        z-index:1;
+        border: 2px solid #f4f4f4;
+        
+        &:hover{
+            background-color: $color-blue;
+            transition: all .2s;
+        }
+        & button {
+            display:none;
+           
+        }
+    }
+}
